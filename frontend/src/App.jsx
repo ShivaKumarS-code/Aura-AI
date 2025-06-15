@@ -29,7 +29,8 @@ function App() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8000/generate-caption/", {
+      const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+      const response = await fetch(`${API_URL}/generate-caption/`, {
         method: "POST",
         body: formData,
       });
