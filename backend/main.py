@@ -9,7 +9,7 @@ app = FastAPI(title="Image Caption Generator API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://aura-ai-navy.vercel.app", "http://localhost:5173"],
+    allow_origins=["http://localhost:5173"], #Add your frontend url
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
